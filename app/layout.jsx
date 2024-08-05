@@ -1,5 +1,6 @@
 // layout.jsx
 import React from 'react';
+import Link from 'next/link';
 import { FaFacebookSquare } from "react-icons/fa";
 import { IoLogoInstagram } from "react-icons/io";
 import { FaSquareXTwitter } from "react-icons/fa6";
@@ -48,11 +49,11 @@ const Layout = ({ children }) => {
 
               <div className='flex justify-center'>
                 <ul className='flex justify-evenly gap-5 mt-2'>
-                  <li className='hover:text-slate-500'> <a href="">Home</a> </li>
-                  <li className='hover:text-slate-500'> <a href="">About</a> </li>
-                  <li className='hover:text-slate-500'> <a href="">Menu</a> </li>
-                  <li className='hover:text-slate-500'> <a href="">Pages</a> </li>
-                  <li className='hover:text-slate-500'> <a href="">Contact</a> </li>
+                  <li className='hover:text-slate-500'> <Link href="/">Home</Link> </li>
+                  <li className='hover:text-slate-500'> <Link href="/register">Register</Link> </li>
+                  <li className='hover:text-slate-500'> <Link href="/menu">Menu</Link> </li>
+                  <li className='hover:text-slate-500'> <Link href="/about">About</Link> </li>
+                  <li className='hover:text-slate-500'> <Link href="contact">Contact</Link> </li>
                 </ul>
               </div>
               

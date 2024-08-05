@@ -7,6 +7,7 @@ import { LuCakeSlice } from "react-icons/lu";
 import { FaClock } from "react-icons/fa6";
 import { MdLocalOffer } from "react-icons/md";
 import { FaShoppingCart } from "react-icons/fa";
+import Link from 'next/link';
 
 const page = () => {
   return (
@@ -30,8 +31,8 @@ const page = () => {
 
 
           <div className='flex flex-row justify-center gap-5 mt-5'>
-              <button className='bg-red-800 p-4 rounded-3xl text-white hover:bg-red-600'>Book A Table</button>
-              <button className='bg-white p-4 rounded-3xl hover:bg-slate-200'>Explore Menu</button>
+              <Link className='bg-red-800 p-4 rounded-3xl text-white hover:bg-red-600' href='/book'>Book A Table</Link>
+              <Link className='bg-white p-4 rounded-3xl hover:bg-slate-200' href='/menu'>Explore Menu</Link>
           </div>
 
 
