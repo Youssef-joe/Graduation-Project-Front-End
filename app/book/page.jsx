@@ -5,6 +5,7 @@ const book = () => {
   return (
     <Fragment>
         <h1 className='flex justify-center text-xl'>this is book page</h1>
+       
     </Fragment>
   )
 }
