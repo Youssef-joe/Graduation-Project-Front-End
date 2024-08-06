@@ -22,7 +22,7 @@ const page = () => {
           style={{ maxWidth: '100%', maxHeight: '500px', objectFit: 'cover' }}
         /> 
         <div className='absolute inset-0 flex items-center justify-center flex-col gap-2'>
-          <h1 className='text-7xl font-bold text-black font-mono text-center'
+          <h1 className='text-7xl font-bold text-black font-roboto text-center'
               style={{maxWidth: '500px'}}>
             Best Food For Your Test
           </h1>

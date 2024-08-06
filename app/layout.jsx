@@ -44,7 +44,7 @@ const Layout = ({ children }) => {
             <div className='flex justify-around p-6'>
               <div className='flex justify-center gap-2'>
                 <IoRestaurantOutline className='h-10 w-10 text-red-700' />
-                <span className='text-3xl font-bold font-mono m-2'>Bistro Bliss</span>
+                <span className='text-3xl font-bold font-marienda m-2'>Bistro Bliss</span>
               </div>
 
               <div className='flex justify-center'>
