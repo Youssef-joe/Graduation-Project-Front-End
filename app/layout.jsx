@@ -58,7 +58,7 @@ const Layout = ({ children }) => {
               </div>
               
               <div>
-                <button className='border p-2 rounded-3xl border-black mb-2 hover:bg-slate-200'>Book A Table</button>
+                <Link href='/book' className='border border-2 p-2 rounded-3xl border-black mb-2 hover:bg-slate-200'>Book A Table</Link>
               </div>
             </div>
         </header>
