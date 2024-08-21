@@ -25,11 +25,11 @@ const About = () => {
           <h1 className='text-3xl font-bold font-marienda'>We Provide Healthy Food For Your Family.</h1>
           <p className='font-bold font-serif'>
             Our story began with a vision to create a unique dining experience that merges fine dining,
-            exceptional service, and a vibrant ambiance. Rooted in the citys rich culinary culture, we aim to
+            exceptional service, and a vibrant ambiance. Rooted in the city&apos;s rich culinary culture, we aim to
             honor our local roots while infusing a global palate.
           </p>
           <p>
-            At place, we believe that dining is not just about food, but also about the overall experience. Our staff,
+            At our place, we believe that dining is not just about food, but also about the overall experience. Our staff,
             renowned for their warmth and dedication, strives to make every visit an unforgettable event.
           </p>
         </div>
@@ -95,8 +95,8 @@ const About = () => {
           <div className='flex justify-around mt-5'>
             {/* Right Side */}
             <div className='flex flex-col gap-5 border bg-gray-300 rounded-xl' style={{ width: "300px" }}>
-              <h1 className='font-bold text-red-800 text-xl mb-3 p-2'> "The Best Restaurant" </h1>
-              <p className='border-b-2 p-3'>Last night, we dined at place and were simply blown away. From the moment we stepped in,
+              <h1 className='font-bold text-red-800 text-xl mb-3 p-2'> &quot;The Best Restaurant&quot; </h1>
+              <p className='border-b-2 p-3'>Last night, we dined at our place and were simply blown away. From the moment we stepped in,
                 we were enveloped in an inviting atmosphere and greeted with warm smiles.
               </p>
 
@@ -118,8 +118,8 @@ const About = () => {
 
             {/* Middle Side */}
             <div className='flex flex-col gap-5 border bg-gray-300 rounded-xl' style={{ width: "300px" }}>
-              <h1 className='font-bold text-red-800 text-xl mb-3 p-2'> "The Best Restaurant" </h1>
-              <p className='border-b-2 p-3'>Last night, we dined at place and were simply blown away. From the moment we stepped in,
+              <h1 className='font-bold text-red-800 text-xl mb-3 p-2'> &quot;The Best Restaurant&quot; </h1>
+              <p className='border-b-2 p-3'>Last night, we dined at our place and were simply blown away. From the moment we stepped in,
                 we were enveloped in an inviting atmosphere and greeted with warm smiles.
               </p>
 
@@ -141,8 +141,8 @@ const About = () => {
 
             {/* Left Side */}
             <div className='flex flex-col gap-5 border bg-gray-300 rounded-xl' style={{ width: "300px" }}>
-              <h1 className='font-bold text-red-800 text-xl mb-3 p-2'> "The Best Restaurant" </h1>
-              <p className='border-b-2 p-3'>Last night, we dined at place and were simply blown away. From the moment we stepped in,
+              <h1 className='font-bold text-red-800 text-xl mb-3 p-2'> &quot;The Best Restaurant&quot; </h1>
+              <p className='border-b-2 p-3'>Last night, we dined at our place and were simply blown away. From the moment we stepped in,
                 we were enveloped in an inviting atmosphere and greeted with warm smiles.
               </p>
 

@@ -89,9 +89,9 @@ const Page = () => {
         <div className='mt-3' style={{width: "500px"}}>
           <h1 className='text-center font-bold text-2xl mb-10'>We Provide Healthy Food For Your Family.</h1>
 
-          <p className='ml-3 font-bold mb-5'>Our story began with a vision to create a unique dining experience that merges fine dining, exceptional service, and a vibrant ambiance. Rooted in the city&rsquo;s rich culinary culture, we aim to honor our local roots while infusing a global palate.</p>
+          <p className='ml-3 font-bold mb-5'>Our story began with a vision to create a unique dining experience that merges fine dining, exceptional service, and a vibrant ambiance. Rooted in the city&apos;s rich culinary culture, we aim to honor our local roots while infusing a global palate.</p>
 
-          <span className='ml-3 flex'>At our place, we believe that dining is not just about food &mdash; it&rsquo;s also about the overall experience. Our staff, renowned for their warmth and dedication, strives to make every visit an unforgettable event.</span>
+          <span className='ml-3 flex'>At our place, we believe that dining is not just about food &mdash; it&apos;s also about the overall experience. Our staff, renowned for their warmth and dedication, strives to make every visit an unforgettable event.</span>
 
           <button className='text-center justify-center flex mt-5 ml-7 bg-white border rounded-xl p-3 hover:bg-slate-400 hover:text-white'>More About Us</button>
         </div>
@@ -137,12 +137,12 @@ const Page = () => {
           <span>
             <Image 
               src="https://images.pexels.com/photos/587741/pexels-photo-587741.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-              alt="Caterings"
+              alt="Corporate Events"
               className='rounded-lg' 
               width={1260}
               height={750}
             />
-            <h1 className='font-bold text-xl p-3'>Caterings</h1>
+            <h1 className='font-bold text-xl p-3'>Corporate Events</h1>
             <p>In the new era of technology, we look into the future with certainty for life.</p>
           </span>
         </div>
