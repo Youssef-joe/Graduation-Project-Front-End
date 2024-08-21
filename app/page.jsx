@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react'
-import "./../styles/globals.css"
+import React, { Fragment } from 'react';
+import "./../styles/globals.css";
 import { GiCoffeeCup } from "react-icons/gi";
 import { FaBowlFood } from "react-icons/fa6";
 import { RiDrinks2Line } from "react-icons/ri";
@@ -10,7 +10,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import Link from 'next/link';
 import Image from 'next/image';
 
-const page = () => {
+const Page = () => {
   return (
     <Fragment>
 
@@ -89,9 +89,9 @@ const page = () => {
         <div className='mt-3' style={{width: "500px"}}>
           <h1 className='text-center font-bold text-2xl mb-10'>We Provide Healthy Food For Your Family.</h1>
 
-          <p className='ml-3 font-bold mb-5'>Our story began with a vision to create a unique dining experience that merges fine dining, exceptional service, and a vibrant ambiance. Rooted in the citys rich culinary culture, we aim to honor our local roots while infusing a global palate.</p>
+          <p className='ml-3 font-bold mb-5'>Our story began with a vision to create a unique dining experience that merges fine dining, exceptional service, and a vibrant ambiance. Rooted in the city’s rich culinary culture, we aim to honor our local roots while infusing a global palate.</p>
 
-          <span className='ml-3 flex'>At our place, we believe that dining is not just about food, but also about the overall experience. Our staff, renowned for their warmth and dedication, strives to make every visit an unforgettable event.</span>
+          <span className='ml-3 flex'>At our place, we believe that dining is not just about food &mdash; it's also about the overall experience. Our staff, renowned for their warmth and dedication, strives to make every visit an unforgettable event.</span>
 
           <button className='text-center justify-center flex mt-5 ml-7 bg-white border rounded-xl p-3 hover:bg-slate-400 hover:text-white'>More About Us</button>
         </div>
@@ -150,56 +150,33 @@ const page = () => {
 
       {/* Section Five */}
       <div className='p-7 bg-slate-300'>
-        <h1 className='text-center p-3 text-4xl font-bold'>Our Popular Items</h1>
-        <div className='grid grid-cols-4 gap-4'>
-          <div className='text-center'>
-            <Image 
-              src="https://images.pexels.com/photos/8963467/pexels-photo-8963467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="Special Item"
-              className='rounded-lg' 
-              width={1260}
-              height={750}
-            />
-            <h1 className='font-bold text-lg'>Special Item</h1>
-            <p>Our special item of the week, fresh and full of flavor.</p>
+        <h1 className='text-center text-4xl p-4'>Our Special Services</h1>
+        <div className='flex justify-around'>
+          <div className='p-5'>
+            <GiCoffeeCup className='text-7xl' />
+            <h1 className='font-bold text-2xl'>Quality Coffee</h1>
+            <p className='text-center'>We offer a wide selection of premium coffee blends, brewed to perfection.</p>
           </div>
-          <div className='text-center'>
-            <Image 
-              src="https://images.pexels.com/photos/992824/pexels-photo-992824.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="Popular Dish"
-              className='rounded-lg' 
-              width={1260}
-              height={750}
-            />
-            <h1 className='font-bold text-lg'>Popular Dish</h1>
-            <p>A fan favorite, loved by all our customers.</p>
+          <div className='p-5'>
+            <FaClock className='text-7xl' />
+            <h1 className='font-bold text-2xl'>24/7 Service</h1>
+            <p className='text-center'>Our service is available around the clock to meet your needs.</p>
           </div>
-          <div className='text-center'>
-            <Image 
-              src="https://images.pexels.com/photos/1860208/pexels-photo-1860208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="Delicious Meal"
-              className='rounded-lg' 
-              width={1260}
-              height={750}
-            />
-            <h1 className='font-bold text-lg'>Delicious Meal</h1>
-            <p>Rich and tasty, a meal that never disappoints.</p>
+          <div className='p-5'>
+            <MdLocalOffer className='text-7xl' />
+            <h1 className='font-bold text-2xl'>Special Offers</h1>
+            <p className='text-center'>Enjoy exclusive deals and discounts on your favorite dishes.</p>
           </div>
-          <div className='text-center'>
-            <Image 
-              src="https://images.pexels.com/photos/233305/pexels-photo-233305.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="Amazing Dessert"
-              className='rounded-lg' 
-              width={1260}
-              height={750}
-            />
-            <h1 className='font-bold text-lg'>Amazing Dessert</h1>
-            <p>The perfect end to a great meal, sweet and satisfying.</p>
+          <div className='p-5'>
+            <FaShoppingCart className='text-7xl' />
+            <h1 className='font-bold text-2xl'>Online Orders</h1>
+            <p className='text-center'>Order your meals online and get them delivered to your doorstep.</p>
           </div>
         </div>
       </div>
-    </Fragment>
-  )
-}
 
-export default page;
+    </Fragment>
+  );
+};
+
+export default Page;

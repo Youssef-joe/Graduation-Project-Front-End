@@ -8,6 +8,7 @@ import { FaGithub } from "react-icons/fa";
 import { BsTelephone } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
 import { IoRestaurantOutline } from "react-icons/io5";
+import Image from "next/image"
 
 const Layout = ({ children }) => {
   return (
