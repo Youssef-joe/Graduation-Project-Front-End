@@ -1,3 +1,5 @@
+"use client";
+
 import React, { Fragment } from 'react';
 import "./../styles/globals.css";
 import { GiCoffeeCup } from "react-icons/gi";
