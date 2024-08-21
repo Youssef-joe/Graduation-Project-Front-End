@@ -25,7 +25,7 @@ const About = () => {
           <h1 className='text-3xl font-bold font-marienda'>We Provide Healthy Food For Your Family.</h1>
           <p className='font-bold font-serif'>
             Our story began with a vision to create a unique dining experience that merges fine dining,
-            exceptional service, and a vibrant ambiance. Rooted in the city's rich culinary culture, we aim to
+            exceptional service, and a vibrant ambiance. Rooted in the citys rich culinary culture, we aim to
             honor our local roots while infusing a global palate.
           </p>
           <p>

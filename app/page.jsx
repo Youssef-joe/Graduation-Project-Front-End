@@ -89,7 +89,7 @@ const page = () => {
         <div className='mt-3' style={{width: "500px"}}>
           <h1 className='text-center font-bold text-2xl mb-10'>We Provide Healthy Food For Your Family.</h1>
 
-          <p className='ml-3 font-bold mb-5'>Our story began with a vision to create a unique dining experience that merges fine dining, exceptional service, and a vibrant ambiance. Rooted in the city's rich culinary culture, we aim to honor our local roots while infusing a global palate.</p>
+          <p className='ml-3 font-bold mb-5'>Our story began with a vision to create a unique dining experience that merges fine dining, exceptional service, and a vibrant ambiance. Rooted in the citys rich culinary culture, we aim to honor our local roots while infusing a global palate.</p>
 
           <span className='ml-3 flex'>At our place, we believe that dining is not just about food, but also about the overall experience. Our staff, renowned for their warmth and dedication, strives to make every visit an unforgettable event.</span>
 
