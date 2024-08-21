@@ -114,7 +114,7 @@ const Page = () => {
 
           <span>
             <Image 
-              src="https://images.pexels.com/photos/3260300/pexels-photo-3260300.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="https://images.pexels.com/photos/19766948/pexels-photo-19766948/free-photo-of-reserved-restaurant-table.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="Reservations"
               className='rounded-lg' 
               width={1260}
@@ -126,7 +126,7 @@ const Page = () => {
 
           <span>
             <Image 
-              src="https://images.pexels.com/photos/1887333/pexels-photo-1887333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="https://images.pexels.com/photos/4393426/pexels-photo-4393426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="Delivery"
               className='rounded-lg' 
               width={1260}
@@ -138,7 +138,7 @@ const Page = () => {
 
           <span>
             <Image 
-              src="https://images.pexels.com/photos/3823477/pexels-photo-3823477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="https://images.pexels.com/photos/587741/pexels-photo-587741.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="Catering"
               className='rounded-lg' 
               width={1260}
