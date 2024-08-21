@@ -2,11 +2,12 @@
 
 import React, { Fragment, useState } from 'react';
 import "./../../../styles/globals.css";
-import Breakfast from "./(Menu Categories)/Breakfast/Page";
+import Breakfast from "./(Menu Categories)/Breakfast/page.jsx";
+import Card from "./(Menu Categories)/Breakfast/Card.jsx"
 import All from "./(Menu Categories)/All/page.jsx";
-import Desserts from "./(Menu Categories)/Desserts/Page";
-import Drinks from "./(Menu Categories)/Drinks/Page";
-import MainDishes from "./(Menu Categories)/MainDishes/Page";
+import Desserts from "./(Menu Categories)/Desserts/page.jsx";
+import Drinks from "./(Menu Categories)/Drinks/page.jsx";
+import MainDishes from "./(Menu Categories)/MainDishes/Page.jsx";
 
 const Menu = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
