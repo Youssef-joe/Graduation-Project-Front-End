@@ -58,7 +58,7 @@ const Layout = ({ children }) => {
               </div>
               
               <div>
-                <Link href='/book' className='border border-2 p-2 rounded-3xl border-black mb-2 hover:bg-slate-200'>Book A Table</Link>
+                <Link href='/book' className='border-2 p-2 rounded-3xl border-black mb-2 hover:bg-slate-200'>Book A Table</Link>
               </div>
             </div>
         </header>
@@ -119,25 +119,29 @@ const Layout = ({ children }) => {
             <p>Follow Us In Instagram</p>
             <div className='grid grid-cols-2 gap-2 mr-5 p-4'>
               <div className='grid grid-rows-2 gap-4'>
-                <img 
+                <Image 
                 src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                  alt="" 
-                 style={{width: "200px", height: "200px"}}/>
-                <img 
+                 width={200}
+                 height={200}/>
+                <Image 
                 src="https://images.pexels.com/photos/1653877/pexels-photo-1653877.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
                 alt=""
-                style={{width: "200px", height: "200px"}} />
+                width={200}
+                height={200} />
               </div>
 
               <div className='grid grid-rows-2 gap-4 '>
-                <img 
+                <Image 
                 src="https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                  alt=""
-                 style={{width: "200px", height: "200px"}} />
-                <img
+                 width={200}
+                 height={200} />
+                <Image
                  src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   alt=""
-                  style={{width: "200px", height: "200px"}} />
+                  width={200}
+                  height={200} />
               </div>
             </div>
           </div>
