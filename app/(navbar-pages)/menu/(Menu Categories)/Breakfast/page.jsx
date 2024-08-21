@@ -1,281 +1,34 @@
-import React, { Fragment } from 'react'
+// components/Breakfast.jsx
+import React from 'react'
+import Card from './Card'
+
+const items = [
+  {
+    src: 'https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    price: '$ 15.99',
+    title: 'Cake ..',
+    description: 'made with meat, salt, oil and other ingredients',
+  },
+  // Add more items as needed
+]
 
 const Breakfast = () => {
   return (
-    <Fragment>
-        <section className='flex flex-col justify-center text-center gap-5 m-5 p-5'>
-
-            {/* That's the row of cards, and the nested divs is the cards itself */}
-            <div className='flex flex-row justify-center text-center gap-3'>
-              <div className='flex flex-col bg-gray-200 p-5 rounded-3xl justify-center text-center gap-3'>
-
-                <img
-                src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt=".."
-                style={{width: "350px", height: "300px"}}
-                className='rounded-2xl' />
-
-                <span className='text-red-700 font-bold text-xl'>$ 15.99</span>
-
-                <h1 className='font-bold text-xl'>Cake ..</h1>
-
-                <p>made with meat, salt, oil and other ingredients</p>
-
-              </div>
-
-              <div className='flex flex-col bg-gray-200 p-5 rounded-3xl justify-center text-center gap-3'>
-
-                <img
-                src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt=".."
-                style={{width: "350px", height: "300px"}}
-                className='rounded-2xl' />
-
-                <span className='text-red-700 font-bold text-xl'>$ 15.99</span>
-
-                <h1 className='font-bold text-xl'>Cake ..</h1>
-
-                <p>made with meat, salt, oil and other ingredients</p>
-
-              </div>
-
-              <div className='flex flex-col bg-gray-200 p-5 rounded-3xl justify-center text-center gap-3'>
-
-                <img
-                src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt=".."
-                style={{width: "350px", height: "300px"}}
-                className='rounded-2xl' />
-
-                <span className='text-red-700 font-bold text-xl'>$ 15.99</span>
-
-                <h1 className='font-bold text-xl'>Cake ..</h1>
-
-                <p>made with meat, salt, oil and other ingredients</p>
-
-              </div>
-
-              <div className='flex flex-col bg-gray-200 p-5 rounded-3xl justify-center text-center gap-3'>
-
-                <img
-                src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt=".."
-                style={{width: "350px", height: "300px"}}
-                className='rounded-2xl' />
-
-                <span className='text-red-700 font-bold text-xl'>$ 15.99</span>
-
-                <h1 className='font-bold text-xl'>Cake ..</h1>
-
-                <p>made with meat, salt, oil and other ingredients</p>
-
-              </div>
-
-            </div> 
-
-            <div className='flex flex-row justify-center text-center gap-3'>
-              <div className='flex flex-col bg-gray-200 p-5 rounded-3xl justify-center text-center gap-3'>
-
-                <img
-                src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt=".."
-                style={{width: "350px", height: "300px"}}
-                className='rounded-2xl' />
-
-                <span className='text-red-700 font-bold text-xl'>$ 15.99</span>
-
-                <h1 className='font-bold text-xl'>Cake ..</h1>
-
-                <p>made with meat, salt, oil and other ingredients</p>
-
-              </div>
-
-              <div className='flex flex-col bg-gray-200 p-5 rounded-3xl justify-center text-center gap-3'>
-
-                <img
-                src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt=".."
-                style={{width: "350px", height: "300px"}}
-                className='rounded-2xl' />
-
-                <span className='text-red-700 font-bold text-xl'>$ 15.99</span>
-
-                <h1 className='font-bold text-xl'>Cake ..</h1>
-
-                <p>made with meat, salt, oil and other ingredients</p>
-
-              </div>
-
-              <div className='flex flex-col bg-gray-200 p-5 rounded-3xl justify-center text-center gap-3'>
-
-                <img
-                src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt=".."
-                style={{width: "350px", height: "300px"}}
-                className='rounded-2xl' />
-
-                <span className='text-red-700 font-bold text-xl'>$ 15.99</span>
-
-                <h1 className='font-bold text-xl'>Cake ..</h1>
-
-                <p>made with meat, salt, oil and other ingredients</p>
-
-              </div>
-
-              <div className='flex flex-col bg-gray-200 p-5 rounded-3xl justify-center text-center gap-3'>
-
-                <img
-                src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt=".."
-                style={{width: "350px", height: "300px"}}
-                className='rounded-2xl' />
-
-                <span className='text-red-700 font-bold text-xl'>$ 15.99</span>
-
-                <h1 className='font-bold text-xl'>Cake ..</h1>
-
-                <p>made with meat, salt, oil and other ingredients</p>
-
-              </div>
-
-            </div> 
-
-            <div className='flex flex-row justify-center text-center gap-3'>
-              <div className='flex flex-col bg-gray-200 p-5 rounded-3xl justify-center text-center gap-3'>
-
-                <img
-                src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt=".."
-                style={{width: "350px", height: "300px"}}
-                className='rounded-2xl' />
-
-                <span className='text-red-700 font-bold text-xl'>$ 15.99</span>
-
-                <h1 className='font-bold text-xl'>Cake ..</h1>
-
-                <p>made with meat, salt, oil and other ingredients</p>
-
-              </div>
-
-              <div className='flex flex-col bg-gray-200 p-5 rounded-3xl justify-center text-center gap-3'>
-
-                <img
-                src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt=".."
-                style={{width: "350px", height: "300px"}}
-                className='rounded-2xl' />
-
-                <span className='text-red-700 font-bold text-xl'>$ 15.99</span>
-
-                <h1 className='font-bold text-xl'>Cake ..</h1>
-
-                <p>made with meat, salt, oil and other ingredients</p>
-
-              </div>
-
-              <div className='flex flex-col bg-gray-200 p-5 rounded-3xl justify-center text-center gap-3'>
-
-                <img
-                src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt=".."
-                style={{width: "350px", height: "300px"}}
-                className='rounded-2xl' />
-
-                <span className='text-red-700 font-bold text-xl'>$ 15.99</span>
-
-                <h1 className='font-bold text-xl'>Cake ..</h1>
-
-                <p>made with meat, salt, oil and other ingredients</p>
-
-              </div>
-
-              <div className='flex flex-col bg-gray-200 p-5 rounded-3xl justify-center text-center gap-3'>
-
-                <img
-                src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt=".."
-                style={{width: "350px", height: "300px"}}
-                className='rounded-2xl' />
-
-                <span className='text-red-700 font-bold text-xl'>$ 15.99</span>
-
-                <h1 className='font-bold text-xl'>Cake ..</h1>
-
-                <p>made with meat, salt, oil and other ingredients</p>
-
-              </div>
-
-            </div> 
-
-            <div className='flex flex-row justify-center text-center gap-3'>
-              <div className='flex flex-col bg-gray-200 p-5 rounded-3xl justify-center text-center gap-3'>
-
-                <img
-                src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt=".."
-                style={{width: "350px", height: "300px"}}
-                className='rounded-2xl' />
-
-                <span className='text-red-700 font-bold text-xl'>$ 15.99</span>
-
-                <h1 className='font-bold text-xl'>Cake ..</h1>
-
-                <p>made with meat, salt, oil and other ingredients</p>
-
-              </div>
-
-              <div className='flex flex-col bg-gray-200 p-5 rounded-3xl justify-center text-center gap-3'>
-
-                <img
-                src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt=".."
-                style={{width: "350px", height: "300px"}}
-                className='rounded-2xl' />
-
-                <span className='text-red-700 font-bold text-xl'>$ 15.99</span>
-
-                <h1 className='font-bold text-xl'>Cake ..</h1>
-
-                <p>made with meat, salt, oil and other ingredients</p>
-
-              </div>
-
-              <div className='flex flex-col bg-gray-200 p-5 rounded-3xl justify-center text-center gap-3'>
-
-                <img
-                src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt=".."
-                style={{width: "350px", height: "300px"}}
-                className='rounded-2xl' />
-
-                <span className='text-red-700 font-bold text-xl'>$ 15.99</span>
-
-                <h1 className='font-bold text-xl'>Cake ..</h1>
-
-                <p>made with meat, salt, oil and other ingredients</p>
-
-              </div>
-
-              <div className='flex flex-col bg-gray-200 p-5 rounded-3xl justify-center text-center gap-3'>
-
-                <img
-                src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt=".."
-                style={{width: "350px", height: "300px"}}
-                className='rounded-2xl' />
-
-                <span className='text-red-700 font-bold text-xl'>$ 15.99</span>
-
-                <h1 className='font-bold text-xl'>Cake ..</h1>
-
-                <p>made with meat, salt, oil and other ingredients</p>
-
-              </div>
-
-            </div> 
-
-            </section>
-    </Fragment>
+    <section className='flex flex-col justify-center text-center gap-5 m-5 p-5'>
+      {Array.from({ length: 4 }).map((_, index) => (
+        <div key={index} className='flex flex-row justify-center text-center gap-3'>
+          {items.map((item, idx) => (
+            <Card
+              key={idx}
+              src={item.src}
+              price={item.price}
+              title={item.title}
+              description={item.description}
+            />
+          ))}
+        </div>
+      ))}
+    </section>
   )
 }
 

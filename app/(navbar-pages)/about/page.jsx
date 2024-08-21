@@ -4,6 +4,7 @@ import { PiPlayPauseFill } from "react-icons/pi";
 import { IoMdClock } from "react-icons/io";
 import { BsWindowDash } from "react-icons/bs";
 import { RiTodoLine } from "react-icons/ri";
+import Image from 'next/image';
 
 const About = () => {
   return (
@@ -11,10 +12,11 @@ const About = () => {
       {/* Section One */}
       <section className='grid grid-cols-2 gap-0 m-5 p-5'>
         <div>
-          <img
+          <Image
             src="https://images.pexels.com/photos/1833336/pexels-photo-1833336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="food"
-            style={{ width: "500px", height: "450px" }}
+            width={500}
+            height={450}
             className='rounded-3xl'
           />
         </div>
@@ -35,11 +37,13 @@ const About = () => {
 
       {/* Section Two */}
       <section className='relative'>
-        <img
+        <Image
           src="https://images.pexels.com/photos/1310777/pexels-photo-1310777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="restaurant"
+          width={1260}
+          height={750}
           className='w-full opacity-30'
-          style={{ maxWidth: '100%', maxHeight: '700px', objectFit: 'cover' }}
+          style={{ objectFit: 'cover', maxHeight: '700px' }}
         />
         <div className='absolute inset-0 flex items-center justify-center flex-col gap-2 text-3xl font-black z-10'>
           <span>
@@ -98,11 +102,12 @@ const About = () => {
 
               {/* Profile Details */}
               <div className='grid grid-cols-2 p-3'>
-                <img
+                <Image
                   src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   alt=""
+                  width={100}
+                  height={100}
                   className='rounded-full'
-                  style={{ width: "100px", height: "100px" }}
                 />
                 <div>
                   <h1 className='font-bold'>Jason Statham</h1>
@@ -120,11 +125,12 @@ const About = () => {
 
               {/* Profile Details */}
               <div className='grid grid-cols-2 p-3'>
-                <img
+                <Image
                   src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   alt=""
+                  width={100}
+                  height={100}
                   className='rounded-full'
-                  style={{ width: "100px", height: "100px" }}
                 />
                 <div>
                   <h1 className='font-bold'>Jason Statham</h1>
@@ -142,11 +148,12 @@ const About = () => {
 
               {/* Profile Details */}
               <div className='grid grid-cols-2 p-3'>
-                <img
+                <Image
                   src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   alt=""
+                  width={100}
+                  height={100}
                   className='rounded-full'
-                  style={{ width: "100px", height: "100px" }}
                 />
                 <div>
                   <h1 className='font-bold'>Jason Statham</h1>
