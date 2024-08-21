@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
 import "./../styles/globals.css";
 import { GiCoffeeCup } from "react-icons/gi";
-import { FaBowlFood } from "react-icons/fa6";
+import { FaBowlFood } from "react-icons/fa";
 import { RiDrinks2Line } from "react-icons/ri";
 import { LuCakeSlice } from "react-icons/lu";
-import { FaClock } from "react-icons/fa6";
+import { FaClock } from "react-icons/fa";
 import { MdLocalOffer } from "react-icons/md";
 import { FaShoppingCart } from "react-icons/fa";
 import Link from 'next/link';
@@ -25,11 +25,13 @@ const Page = () => {
         />
         <div className='absolute inset-0 flex items-center justify-center flex-col gap-2'>
           <h1 className='text-7xl font-bold text-black font-roboto text-center'
-              style={{maxWidth: '500px'}}>
+              style={{ maxWidth: '500px' }}>
             Best Food For Your Test
           </h1>
           <p className='from-neutral-600 font-serif text-center mt-2'
-              style={{maxWidth: '400px'}}>Discover delectable cuisine and unforgettable moments in our welcoming, culinary heaven</p>
+              style={{ maxWidth: '400px' }}>
+            Discover delectable cuisine and unforgettable moments in our welcoming, culinary heaven
+          </p>
 
           <div className='flex flex-row justify-center gap-5 mt-5'>
               <Link className='bg-red-800 p-4 rounded-3xl text-white hover:bg-red-600' href='/book'>Book A Table</Link>
@@ -44,28 +46,36 @@ const Page = () => {
 
         <div className='flex flex-row justify-around text-center m-2 p-2'>
             <div className='border grid grid-rows-3 justify-center text-center p-4 m-3'>
-              <span className='flex justify-center text-center mt-4'><GiCoffeeCup className='text-7xl bg-slate-400 rounded-full p-3'/></span>
+              <span className='flex justify-center text-center mt-4'>
+                <GiCoffeeCup className='text-7xl bg-slate-400 rounded-full p-3' />
+              </span>
               <h1 className='font-bold text-2xl mt-2'>Breakfast</h1>
               <p>In the era of technology we look into the future with certainty and pride for our life.</p>
               <a href="#" className='text-red-700 font-bold font-mono'>Explore Menu</a>
             </div>
 
             <div className='border grid grid-rows-3 justify-center text-center p-4 m-3'>
-              <span className='flex justify-center text-center mt-4'><FaBowlFood className='text-7xl bg-slate-400 rounded-full p-3'/></span>
+              <span className='flex justify-center text-center mt-4'>
+                <FaBowlFood className='text-7xl bg-slate-400 rounded-full p-3' />
+              </span>
               <h1 className='font-bold text-2xl mt-2'>Main Dishes</h1>
               <p>In the era of technology we look into the future with certainty and pride for our life.</p>
               <a href="#" className='text-red-700 font-bold font-mono'>Explore Menu</a>
             </div>
 
             <div className='border grid grid-rows-3 justify-center text-center p-4 m-3'>
-              <span className='flex justify-center text-center mt-4'><RiDrinks2Line className='text-7xl bg-slate-400 rounded-full p-3'/></span>
+              <span className='flex justify-center text-center mt-4'>
+                <RiDrinks2Line className='text-7xl bg-slate-400 rounded-full p-3' />
+              </span>
               <h1 className='font-bold text-2xl mt-2'>Drinks</h1>
               <p>In the era of technology we look into the future with certainty and pride for our life.</p>
               <a href="#" className='text-red-700 font-bold font-mono'>Explore Menu</a>
             </div>
             
             <div className='border grid grid-rows-3 justify-center text-center p-4 m-3'>
-              <span className='flex justify-center text-center mt-4'><LuCakeSlice className='text-7xl bg-slate-400 rounded-full p-3'/></span>
+              <span className='flex justify-center text-center mt-4'>
+                <LuCakeSlice className='text-7xl bg-slate-400 rounded-full p-3' />
+              </span>
               <h1 className='font-bold text-2xl mt-2'>Desserts</h1>
               <p>In the era of technology we look into the future with certainty and pride for our life.</p>
               <a href="#" className='text-red-700 font-bold font-mono'>Explore Menu</a>
@@ -79,25 +89,19 @@ const Page = () => {
           <Image 
             src="https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="Healthy Food"
-            style={{width: "500px", height: "450px"}}
+            style={{ width: "500px", height: "450px" }}
             className='rounded-lg' 
             width={500}
             height={450}
           />
         </div>
         
-        <div className='mt-3' style={{width: "500px"}}>
+        <div className='mt-3' style={{ width: "500px" }}>
           <h1 className='text-center font-bold text-2xl mb-10'>We Provide Healthy Food For Your Family.</h1>
 
-<<<<<<< HEAD
-          <p className='ml-3 font-bold mb-5'>Our story began with a vision to create a unique dining experience that merges fine dining, exceptional service, and a vibrant ambiance. Rooted in the city&apos;s rich culinary culture, we aim to honor our local roots while infusing a global palate.</p>
-
-          <span className='ml-3 flex'>At our place, we believe that dining is not just about food &mdash; it&apos;s also about the overall experience. Our staff, renowned for their warmth and dedication, strives to make every visit an unforgettable event.</span>
-=======
           <p className='ml-3 font-bold mb-5'>Our story began with a vision to create a unique dining experience that merges fine dining, exceptional service, and a vibrant ambiance. Rooted in the city&rsquo;s rich culinary culture, we aim to honor our local roots while infusing a global palate.</p>
 
           <span className='ml-3 flex'>At our place, we believe that dining is not just about food &mdash; it&rsquo;s also about the overall experience. Our staff, renowned for their warmth and dedication, strives to make every visit an unforgettable event.</span>
->>>>>>> 6fe16d3de090a2907bcc60de16dd68505629bcc4
 
           <button className='text-center justify-center flex mt-5 ml-7 bg-white border rounded-xl p-3 hover:bg-slate-400 hover:text-white'>More About Us</button>
         </div>
