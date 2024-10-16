@@ -1,15 +1,15 @@
 export const apiRequest = async (url, method, data) => {
-  const respons = await fetch(url, {
+  const response = await fetch(url, {
     method,
     headers: {
-      "content-type": "application/json",
+      "Content-Type": "application/json",
     },
     body: JSON.stringify(data),
   });
 
-  if (!respons.ok) {
-    throw new Error(`Error: ${respons.statusText}`);
+  if (!response.ok) {
+    throw new Error(`Error: ${response.statusText}`);
   }
 
-  return await respons.json();
+  return await response.json();
 };
