@@ -94,7 +94,7 @@ const About = () => {
 
           <div className='flex justify-around mt-5'>
             {/* Right Side */}
-            <div className='flex flex-col gap-5 border bg-gray-300 rounded-xl' style={{ width: "300px" }}>
+            <div className='flex flex-col gap-5 border bg-gray-300 rounded-xl shadow-lg' style={{ width: "300px" }}>
               <h1 className='font-bold text-red-800 text-xl mb-3 p-2'> &quot;The Best Restaurant&quot; </h1>
               <p className='border-b-2 p-3'>Last night, we dined at our place and were simply blown away. From the moment we stepped in,
                 we were enveloped in an inviting atmosphere and greeted with warm smiles.
@@ -117,7 +117,7 @@ const About = () => {
             </div>
 
             {/* Middle Side */}
-            <div className='flex flex-col gap-5 border bg-gray-300 rounded-xl' style={{ width: "300px" }}>
+            <div className='flex flex-col gap-5 border bg-gray-300 rounded-xl shadow-lg' style={{ width: "300px" }}>
               <h1 className='font-bold text-red-800 text-xl mb-3 p-2'> &quot;The Best Restaurant&quot; </h1>
               <p className='border-b-2 p-3'>Last night, we dined at our place and were simply blown away. From the moment we stepped in,
                 we were enveloped in an inviting atmosphere and greeted with warm smiles.
@@ -140,7 +140,7 @@ const About = () => {
             </div>
 
             {/* Left Side */}
-            <div className='flex flex-col gap-5 border bg-gray-300 rounded-xl' style={{ width: "300px" }}>
+            <div className='flex flex-col gap-5 border bg-gray-300 rounded-xl shadow-lg' style={{ width: "300px" }}>
               <h1 className='font-bold text-red-800 text-xl mb-3 p-2'> &quot;The Best Restaurant&quot; </h1>
               <p className='border-b-2 p-3'>Last night, we dined at our place and were simply blown away. From the moment we stepped in,
                 we were enveloped in an inviting atmosphere and greeted with warm smiles.

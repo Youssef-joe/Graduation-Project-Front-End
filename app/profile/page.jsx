@@ -1,12 +1,24 @@
-import React, { Fragment } from 'react'
-import "./../../styles/globals.css"
+"use client";
 
-const profile = () => {
+import React, { useContext } from 'react';
+import { AuthContext } from './../context/AuthContext.js'; // Adjust the path if necessary
+
+
+const Profile = () => {
+  const { user, isAuthenticated } = useContext(AuthContext);
+
+  if (!isAuthenticated) {
+    return <p>Please log in to view your profile.</p>;
+  }
+
   return (
-    <Fragment>
-        <h1 className='flex justify-center text-xl'>this is profile page</h1>
-    </Fragment>
-  )
-}
+    <div>
+      <h1>Welcome, {user?.name || "User"}!</h1>
+      <p>Email: {user?.email}</p>
+      <p>Phone: {user?.phone || "No phone number available"}</p>
+      {/* Add more user data as needed */}
+    </div>
+  );
+};
 
-export default profile
+export default Profile;
