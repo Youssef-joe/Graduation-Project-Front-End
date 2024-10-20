@@ -10,7 +10,7 @@ import { MdLocalOffer } from "react-icons/md";
 import { FaShoppingCart } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
-import Home from './Home/Page.jsx'
+import Home from './Home/page.jsx'
 import "./../styles/globals.css";
 
 const Page = () => {
