@@ -3,28 +3,29 @@ import React, { Fragment, useState } from "react";
 import "../../../styles/globals.css";
 import { loginUser } from "../../utils/auth";
 import { useRouter } from "next/navigation";
-
+import axios from "axios";
 
 const Login = () => {
   // Changed "login" to "Login"
-  const [userEmail, setUserEmail] = useState("");
-  const [userPass, setUserPass] = useState("");
-  const router = useRouter();
-  
 
-  const handleLogin = async (e) => {
+  const [formData, setFormData] = useState({ email: "", password: "" });
+  const router = useRouter();
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log("Attempting to log in with:", {
-        email: userEmail,
-        password: userPass,
-      });
-      const data = await loginUser({ email: userEmail, password: userPass });
-      console.log("Login successful: ", data);
-     
-      router.push("/Profile");
-    } catch (er) {
-      console.log("Login error: ", er.message ? er.message : er);
+      const res = await axios.post(
+        "http://localhost:4000/api/login",
+        formData
+      );
+      localStorage.setItem("token", res.data.token); // Store the token in localStorage
+      router.push("/Profile"); // Redirect to the profile page
+    } catch (error) {
+      console.error(error.message ? error.meessage : error);
     }
   };
 
@@ -40,7 +41,7 @@ const Login = () => {
               <form
                 className="space-y-4 md:space-y-6"
                 action="#"
-                onSubmit={handleLogin} // Make sure to use handleLogin here
+                onSubmit={handleSubmit} // Make sure to use handleLogin here
               >
                 <div>
                   <label
@@ -54,9 +55,10 @@ const Login = () => {
                     id="email"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="name@company.com"
+                    onChange={handleChange}
                     required
-                    value={userEmail} // Ensure this matches the state
-                    onChange={(e) => setUserEmail(e.target.value)} // Update this
+                    // value={userEmail} // Ensure this matches the state
+                    // Update this
                   />
                 </div>
                 <div>
@@ -72,8 +74,8 @@ const Login = () => {
                     placeholder="••••••••"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     required
-                    value={userPass} // Ensure this matches the state
-                    onChange={(e) => setUserPass(e.target.value)} // Update this
+                    // value={userPass} // Ensure this matches the state
+                    onChange={handleChange} // Update this
                   />
                 </div>
                 {/* Add any other form fields you need here */}
@@ -91,4 +93,4 @@ const Login = () => {
   );
 };
 
-export default Login; // Exporting as Login
+export default Login;
