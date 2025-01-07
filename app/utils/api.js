@@ -1,22 +1,18 @@
-export const apiRequest = async (url, method, data) => {
-  try {
-    const response = await fetch(url, {
-      method: method,
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-  
-    if (!response.ok) {
-      throw new Error(`Error: ${response.statusText}`);
-    }
-  
-    return await response.json();
+// utils/api.js
+import axios from "axios";
 
-  } catch(er) {
-    console.error('API request error: ', er);
-    throw error; // rethrow to handle it in the calling function
+const api = axios.create({
+  baseURL: "http://localhost:4000",
+  headers: { "Content-Type": "application/json" },
+});
 
+// Add an interceptor to include the token in every request
+api.interceptors.request.use((config) => {
+  const token = localStorage.getItem("token");
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
   }
-};
+  return config;
+});
+
+export default api;
