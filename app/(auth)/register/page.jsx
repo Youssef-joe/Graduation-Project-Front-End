@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "../../../styles/globals.css";
 import { registerUser } from "./../../utils/auth.js";
 import { useRouter } from "next/navigation";
-import { validateRegisterForm } from "../../utils/validation.js";
+import { validateRegisterForm } from "../../utils/validation";
 
 const InputField = ({ label, type, name, value, onChange, placeholder, error }) => (
   <div>

@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState } from 'react';
 import ProtectedRoute from '../components/ProtectedRoute';
 import api from '../utils/api';
