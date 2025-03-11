@@ -1,16 +1,26 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../../styles/globals.css";
-import { useRouter } from "next/navigation";
-import axios from "axios";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useAuth } from "../../context/AuthContext";
+import { motion } from "framer-motion";
+import api from "../../utils/api";
 
-const InputField = ({ label, type, name, value, onChange, placeholder, error, disabled }) => (
+const InputField = ({
+  label,
+  type,
+  name,
+  value,
+  onChange,
+  placeholder,
+  error,
+  disabled,
+}) => (
   <div>
     <label
       htmlFor={name}
-      className="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
-    >
+      className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">
       {label}
     </label>
     <input
@@ -31,8 +41,20 @@ const InputField = ({ label, type, name, value, onChange, placeholder, error, di
 const Login = () => {
   const [formData, setFormData] = useState({ userEmail: "", password: "" });
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState(false);
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const { login } = useAuth();
+
+  useEffect(() => {
+    // Check if user just registered
+    if (searchParams.get("registered")) {
+      setSuccess(
+        "Registration successful! Please login with your credentials."
+      );
+    }
+  }, [searchParams]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -44,15 +66,16 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000"}/api/login`,
-        formData
-      );
-      localStorage.setItem("token", res.data.token);
-      localStorage.setItem("user", JSON.stringify(res.data.user));
+      const res = await api.post("/api/login", formData);
+      // Use the login function from AuthContext
+      login(res.data.user, res.data.token);
+      // Redirect to profile page
       router.push("/Profile");
     } catch (error) {
-      setError(error.response?.data?.message || "Invalid email or password. Please try again.");
+      setError(
+        error.response?.data?.message ||
+          "Invalid email or password. Please try again."
+      );
     } finally {
       setLoading(false);
     }
@@ -67,7 +90,22 @@ const Login = () => {
               <h1 className="text-xl font-bold leading-tight tracking-tight text--900 md:text-2xl dark:text-black">
                 Login With Your Account
               </h1>
-              {error && <p className="text-red-500 text-sm">{error}</p>}
+              {success && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="p-4 bg-green-100 text-green-700 rounded-lg">
+                  {success}
+                </motion.div>
+              )}
+              {error && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="p-4 bg-red-100 text-red-700 rounded-lg">
+                  {error}
+                </motion.div>
+              )}
               <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
                 <InputField
                   label="Your email"
@@ -89,13 +127,22 @@ const Login = () => {
                   error={error && error.includes("password") ? error : ""}
                   disabled={loading}
                 />
-                <button
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                   type="submit"
                   disabled={loading}
-                  className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-900 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-                >
+                  className="w-full text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-colors duration-200">
                   {loading ? "Logging in..." : "Login"}
-                </button>
+                </motion.button>
+                <p className="text-sm font-light text-gray-500 dark:text-gray-400">
+                  Don't have an account?{" "}
+                  <a
+                    href="/Register"
+                    className="font-medium text-red-600 hover:underline">
+                    Register here
+                  </a>
+                </p>
               </form>
             </div>
           </div>
