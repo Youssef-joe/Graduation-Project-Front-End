@@ -86,7 +86,7 @@ const Profile = () => {
               <div className="flex justify-between items-center mb-8">
                 <h1 className="text-3xl font-bold text-gray-900">
                   Profile Settings
-                </h1>
+            </h1>
                 {!isEditing && (
                   <motion.button
                     whileHover={{ scale: 1.05 }}
