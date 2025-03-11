@@ -57,7 +57,9 @@ const Menu = () => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-red-600 text-center">
-          <p className="text-xl font-semibold mb-2">Oops! Something went wrong.</p>
+          <p className="text-xl font-semibold mb-2">
+            Oops! Something went wrong.
+          </p>
           <p>{error}</p>
         </div>
       </div>

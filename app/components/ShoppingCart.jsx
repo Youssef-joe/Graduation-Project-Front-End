@@ -11,7 +11,14 @@ import { useCart } from "../context/CartContext";
 import Image from "next/image";
 
 const ShoppingCart = ({ isOpen, onClose }) => {
-  const { cart, total, removeFromCart, updateQuantity, clearCart, MAX_QUANTITY } = useCart();
+  const {
+    cart,
+    total,
+    removeFromCart,
+    updateQuantity,
+    clearCart,
+    MAX_QUANTITY,
+  } = useCart();
 
   const handleQuantityUpdate = (itemId, currentQuantity, change) => {
     const newQuantity = currentQuantity + change;
@@ -94,13 +101,17 @@ const ShoppingCart = ({ isOpen, onClose }) => {
                         </p>
                         <div className="flex items-center gap-3">
                           <button
-                            onClick={() => handleQuantityUpdate(item._id, item.quantity, -1)}
+                            onClick={() =>
+                              handleQuantityUpdate(item._id, item.quantity, -1)
+                            }
                             className="p-1 rounded-full bg-gray-100 hover:bg-gray-200">
                             <FaMinus size={12} />
                           </button>
                           <span className="font-semibold">{item.quantity}</span>
                           <button
-                            onClick={() => handleQuantityUpdate(item._id, item.quantity, 1)}
+                            onClick={() =>
+                              handleQuantityUpdate(item._id, item.quantity, 1)
+                            }
                             disabled={item.quantity >= MAX_QUANTITY}
                             className={`p-1 rounded-full ${
                               item.quantity >= MAX_QUANTITY

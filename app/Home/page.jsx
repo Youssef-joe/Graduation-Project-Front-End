@@ -13,15 +13,15 @@ import "./../../styles/globals.css";
 const fadeInUp = {
   initial: { y: 60, opacity: 0 },
   animate: { y: 0, opacity: 1 },
-  transition: { duration: 0.6 }
+  transition: { duration: 0.6 },
 };
 
 const staggerContainer = {
   animate: {
     transition: {
-      staggerChildren: 0.1
-    }
-  }
+      staggerChildren: 0.1,
+    },
+  },
 };
 
 const Home = () => {
@@ -37,21 +37,22 @@ const Home = () => {
           priority
         />
         <div className="absolute inset-0 bg-black bg-opacity-50" />
-        <motion.div 
+        <motion.div
           className="relative z-10 text-center px-4"
           variants={staggerContainer}>
-          <motion.h1 
+          <motion.h1
             className="text-5xl md:text-7xl font-bold text-white font-roboto mb-6"
             variants={fadeInUp}>
-            Best Food For 
+            Best Food For
             <span className="text-red-500"> Your Taste</span>
           </motion.h1>
-          <motion.p 
+          <motion.p
             className="text-lg md:text-xl text-white max-w-2xl mx-auto mb-8"
             variants={fadeInUp}>
-            Discover delectable cuisine and unforgettable moments in our welcoming culinary heaven.
+            Discover delectable cuisine and unforgettable moments in our
+            welcoming culinary heaven.
           </motion.p>
-          <motion.div 
+          <motion.div
             className="flex flex-wrap justify-center gap-4"
             variants={fadeInUp}>
             <Link
@@ -81,23 +82,47 @@ const Home = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="container mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-4">Browse Our Menu</h2>
+          <h2 className="text-4xl font-bold text-center mb-4">
+            Browse Our Menu
+          </h2>
           <p className="text-gray-600 text-center max-w-2xl mx-auto mb-12">
-            Explore our wide range of delicious offerings, carefully crafted to satisfy your cravings
+            We&apos;re dedicated to providing you with the finest dining
+            experience
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { Icon: GiCoffeeCup, title: "Breakfast", color: "bg-amber-100", iconColor: "text-amber-600" },
-              { Icon: FaBowlFood, title: "Main Dishes", color: "bg-red-100", iconColor: "text-red-600" },
-              { Icon: RiDrinks2Line, title: "Drinks", color: "bg-blue-100", iconColor: "text-blue-600" },
-              { Icon: LuCakeSlice, title: "Desserts", color: "bg-purple-100", iconColor: "text-purple-600" },
+              {
+                Icon: GiCoffeeCup,
+                title: "Breakfast",
+                color: "bg-amber-100",
+                iconColor: "text-amber-600",
+              },
+              {
+                Icon: FaBowlFood,
+                title: "Main Dishes",
+                color: "bg-red-100",
+                iconColor: "text-red-600",
+              },
+              {
+                Icon: RiDrinks2Line,
+                title: "Drinks",
+                color: "bg-blue-100",
+                iconColor: "text-blue-600",
+              },
+              {
+                Icon: LuCakeSlice,
+                title: "Desserts",
+                color: "bg-purple-100",
+                iconColor: "text-purple-600",
+              },
             ].map(({ Icon, title, color, iconColor }, idx) => (
               <motion.div
                 key={idx}
                 whileHover={{ y: -10 }}
                 className={`${color} p-8 rounded-2xl text-center group hover:shadow-xl transition-all duration-300`}>
                 <div className="flex flex-col items-center">
-                  <div className={`${iconColor} text-5xl mb-4 transform group-hover:scale-110 transition-transform`}>
+                  <div
+                    className={`${iconColor} text-5xl mb-4 transform group-hover:scale-110 transition-transform`}>
                     <Icon />
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{title}</h3>
@@ -152,10 +177,14 @@ const Home = () => {
                 We Provide Healthy Food For Your Family
               </h2>
               <p className="text-gray-600 mb-6">
-                Our story began with a vision to create a unique dining experience that merges fine dining, exceptional service, and a vibrant ambiance. Every dish is crafted with passion and precision by our expert chefs.
+                Our story began with a vision to create a unique dining
+                experience that merges fine dining, exceptional service, and a
+                vibrant ambiance. Every dish is crafted with passion and
+                precision by our expert chefs.
               </p>
               <p className="text-gray-600 mb-8">
-                At our place, we believe dining is not just about food — it's about creating memorable experiences that bring people together.
+                At our place, we believe dining is not just about food — it's
+                about creating memorable experiences that bring people together.
               </p>
               <Link
                 href="/about"
@@ -177,30 +206,31 @@ const Home = () => {
           className="container mx-auto">
           <h2 className="text-4xl font-bold text-center mb-4">Our Services</h2>
           <p className="text-gray-600 text-center max-w-2xl mx-auto mb-12">
-            We offer a range of services to make your special occasions truly memorable
+            We offer a range of services to make your special occasions truly
+            memorable
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 src: "https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg",
                 title: "Private Parties",
-                description: "Perfect for birthdays and celebrations"
+                description: "Perfect for birthdays and celebrations",
               },
               {
                 src: "https://images.pexels.com/photos/10994599/pexels-photo-10994599.jpeg",
                 title: "Wedding Catering",
-                description: "Make your special day memorable"
+                description: "Make your special day memorable",
               },
               {
                 src: "https://images.pexels.com/photos/4916556/pexels-photo-4916556.jpeg",
                 title: "Corporate Events",
-                description: "Professional service for your business"
+                description: "Professional service for your business",
               },
               {
                 src: "https://images.pexels.com/photos/6518865/pexels-photo-6518865.jpeg",
                 title: "Special Occasions",
-                description: "Custom menus for any event"
-              }
+                description: "Custom menus for any event",
+              },
             ].map(({ src, title, description }, idx) => (
               <motion.div
                 key={idx}

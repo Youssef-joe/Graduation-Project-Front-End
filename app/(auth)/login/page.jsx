@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import "../../../styles/globals.css";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useAuth } from "../../context/AuthContext";
@@ -38,21 +38,19 @@ const InputField = ({
   </div>
 );
 
-const Login = () => {
+const LoginContent = () => {
   const [formData, setFormData] = useState({ userEmail: "", password: "" });
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-  const [loading, setLoading] = useState(false);
   const router = useRouter();
   const searchParams = useSearchParams();
   const { login } = useAuth();
 
   useEffect(() => {
     // Check if user just registered
-    if (searchParams.get("registered")) {
-      setSuccess(
-        "Registration successful! Please login with your credentials."
-      );
+    const registrationSuccess = searchParams.get("registered");
+    if (registrationSuccess) {
+      setSuccess("Registration successful! Please log in.");
     }
   }, [searchParams]);
 
@@ -63,7 +61,6 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-    setLoading(true);
 
     try {
       const res = await api.post("/api/login", formData);
@@ -76,79 +73,100 @@ const Login = () => {
         error.response?.data?.message ||
           "Invalid email or password. Please try again."
       );
-    } finally {
-      setLoading(false);
     }
   };
 
   return (
-    <div className="login-form">
-      <section className="bg-gray-50 dark:bg--200">
-        <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-          <div className="w-full bg-white rounded-lg dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-white dark:border--700 shadow-xl">
-            <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-              <h1 className="text-xl font-bold leading-tight tracking-tight text--900 md:text-2xl dark:text-black">
-                Login With Your Account
-              </h1>
-              {success && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="p-4 bg-green-100 text-green-700 rounded-lg">
-                  {success}
-                </motion.div>
-              )}
-              {error && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="p-4 bg-red-100 text-red-700 rounded-lg">
-                  {error}
-                </motion.div>
-              )}
-              <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
-                <InputField
-                  label="Your email"
-                  type="email"
-                  name="userEmail"
-                  value={formData.userEmail}
-                  onChange={handleChange}
-                  placeholder="name@company.com"
-                  error={error && error.includes("email") ? error : ""}
-                  disabled={loading}
-                />
-                <InputField
-                  label="Password"
-                  type="password"
-                  name="password"
-                  value={formData.password}
-                  onChange={handleChange}
-                  placeholder="••••••••"
-                  error={error && error.includes("password") ? error : ""}
-                  disabled={loading}
-                />
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  type="submit"
-                  disabled={loading}
-                  className="w-full text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-colors duration-200">
-                  {loading ? "Logging in..." : "Login"}
-                </motion.button>
-                <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                  Don't have an account?{" "}
-                  <a
-                    href="/Register"
-                    className="font-medium text-red-600 hover:underline">
-                    Register here
-                  </a>
-                </p>
-              </form>
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-md w-full space-y-8">
+        <div>
+          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+            Sign in to your account
+          </h2>
+        </div>
+        {success && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-green-100 text-green-600 p-3 rounded-lg">
+            {success}
+          </motion.div>
+        )}
+        {error && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-red-100 text-red-600 p-3 rounded-lg">
+            {error}
+          </motion.div>
+        )}
+        <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
+          <div className="rounded-md shadow-sm -space-y-px">
+            <div>
+              <label htmlFor="email-address" className="sr-only">
+                Email address
+              </label>
+              <input
+                id="email-address"
+                name="userEmail"
+                type="email"
+                autoComplete="email"
+                required
+                value={formData.userEmail}
+                onChange={handleChange}
+                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm"
+                placeholder="Email address"
+              />
+            </div>
+            <div>
+              <label htmlFor="password" className="sr-only">
+                Password
+              </label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autoComplete="current-password"
+                required
+                value={formData.password}
+                onChange={handleChange}
+                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm"
+                placeholder="Password"
+              />
             </div>
           </div>
-        </div>
-      </section>
+
+          <div>
+            <button
+              type="submit"
+              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+              Sign in
+            </button>
+          </div>
+        </form>
+        <p className="text-sm font-light text-gray-500 dark:text-gray-400 text-center">
+          Don't have an account?{" "}
+          <a
+            href="/Register"
+            className="font-medium text-red-600 hover:underline">
+            Register here
+          </a>
+        </p>
+      </div>
     </div>
+  );
+};
+
+const Login = () => {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-red-600"></div>
+        </div>
+      }>
+      <LoginContent />
+    </Suspense>
   );
 };
 

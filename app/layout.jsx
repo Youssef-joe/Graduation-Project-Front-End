@@ -3,16 +3,14 @@
 import { AuthProvider } from "./context/AuthContext"; // Import AuthProvider
 import { CartProvider } from "./context/CartContext";
 import Layout from "./AppLayout"; // Import your Layout component
-import { Inter } from "next/font/google";
+import { inter } from "./fonts";
 import "./globals.css";
 import { AnimatePresence } from "framer-motion";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="h-full bg-gray-50">
-      <body className={`${inter.className} h-full antialiased`}>
+    <html lang="en" className={`h-full bg-gray-50 ${inter.variable}`}>
+      <body className="h-full antialiased">
         <AuthProvider>
           <CartProvider>
             <AnimatePresence mode="wait">

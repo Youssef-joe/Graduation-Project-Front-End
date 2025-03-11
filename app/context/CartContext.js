@@ -14,9 +14,9 @@ export const CartProvider = ({ children }) => {
       try {
         const parsedCart = JSON.parse(savedCart);
         // Validate cart items
-        const validatedCart = parsedCart.map(item => ({
+        const validatedCart = parsedCart.map((item) => ({
           ...item,
-          quantity: Math.min(Math.max(1, item.quantity), MAX_QUANTITY)
+          quantity: Math.min(Math.max(1, item.quantity), MAX_QUANTITY),
         }));
         setCart(validatedCart);
       } catch (error) {
@@ -47,7 +47,9 @@ export const CartProvider = ({ children }) => {
       if (existingItem) {
         if (existingItem.quantity >= MAX_QUANTITY) return prevCart;
         return prevCart.map((i) =>
-          i._id === item._id ? { ...i, quantity: Math.min(i.quantity + 1, MAX_QUANTITY) } : i
+          i._id === item._id
+            ? { ...i, quantity: Math.min(i.quantity + 1, MAX_QUANTITY) }
+            : i
         );
       }
       return [...prevCart, { ...item, quantity: 1 }];
