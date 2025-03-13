@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { fetchUser } from "../utils/auth"; // Ensure this is correctly implemented
+import { fetchUser } from "../utils/auth"; 
 
 const AuthContext = createContext();
 
